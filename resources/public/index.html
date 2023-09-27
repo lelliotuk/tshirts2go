@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script type="text/javascript" src="./js/client.js"></script>
+</head>
+
+<body>
+	<ul class="navbar">
+		<a href="/"><li class="active">Client App</li></a>
+		<a href="/admin"><li>Admin Dashboard</li></a>
+	</ul>
+	<h1>T-Shirts To Go</h1>
+	<div id="content">
+		<div id="product">
+			<div class="preview">
+
+				<img width="360px" height="360px" src="./img/tee.png" />
+
+			</div>
+			<div class="options">
+				<form id="productForm" action="#"> 
+					<div class="option">
+						<label for="size">Size</label>
+						<select name="size" id="size">
+							<option value="S">S</option>
+							<option selected value="M">M</option>
+							<option value="L">L</option>
+							<option value="X">XL</option>
+							<option value="2">XXL</option>
+						</select>
+					</div>
+				
+					<input type="hidden" name="colour" value="BK">
+					<div class="option">
+						<span class="radio-colour active" data-colour="BK" style="background-color: black;"></span>
+						<span class="radio-colour" data-colour="GY" style="background-color: grey;"></span>
+						<span class="radio-colour" data-colour="WE" style="background-color: white;"></span>
+						<span class="radio-colour" data-colour="RD" style="background-color: red;"></span>
+						<span class="radio-colour" data-colour="GN" style="background-color: green;"></span>
+						<span class="radio-colour" data-colour="BE" style="background-color: blue;"></span>
+						<span class="radio-colour" data-colour="PE" style="background-color: purple;"></span>
+					</div>
+				
+					<div class="option">
+						<input type="radio" id="qualityStd" name="quality" value="S" checked /><label for="qualityStd">Standard (£9.99)</label>
+						<input type="radio" id="qualitySup" name="quality" value="P" /><label for="qualitySup">Premium (£15.99)</label>
+					</div>
+					
+					<div class="option">
+						<label for="qty">Quantity</label>
+						<input type="number" id="qty" name="qty" value="1">
+					</div>
+					
+					<div class="option">
+					<button id="payButton" type="submit" value="Enter Shipping Details">Enter Shipping Details</button>
+					<div id="productStatus" class="hidden"></div>
+					</div>
+				</form> 
+			</div>
+		</div>
+		
+		<div id="shipping" class="hidden">
+			<h2>Enter shipping details</h2>
+      <form id="shippingForm" action="#"> 
+        <div class="shipping">
+          <div><label for="fullName">Full Name</label><input type="text" id="fullName" name="fullName"></div>
+          <div><label for="address1">Address Line 1</label><input type="text" id="address1" name="address1"></div>
+          <div><label for="address2">Address Line 2</label><input type="text" id="address2" name="address2"></div>
+          <div><label for="city">City</label><input type="text" id="city" name="city"></div>
+          <div><label for="postcode">Postcode</label><input type="text" id="postcode" name="postcode"></div>
+          
+          <button id="shippingBackButton" value="Back">Back</button>
+          <button id="shippingButton" type="submit" value="Confirm Shipping Details">Confirm Shipping Details</button>
+          <div id="shippingStatus" class="hidden"></div>
+        </div>
+        
+      </form>
+		</div>
+		
+		<div id="confirmed" class="hidden">
+			<h1>Order confirmd</h1>
+		</div>
+	</div>
+</body>
+
+</html>

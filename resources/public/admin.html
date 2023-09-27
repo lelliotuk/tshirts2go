@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script type="text/javascript" src="./js/admin.js"></script>
+</head>
+
+<body>
+	<ul class="navbar">
+		<a href="/"><li>Client App</li></a>
+		<a href="/admin"><li class="active">Admin Dashboard</li></a>
+	</ul>
+	<ul class="navbar">
+		<a id="stockPageButton" href="#"><li class="active">Stock</li></a>
+		<a id="orderPageButton" href="#"><li>Orders</li></a>
+    <a onclick="resetDatabase();" href="#"><li class="active" style="background-color:red; float: right;">Reset DB</li></a>
+	</ul>
+	<div id="content">
+		<div id="stockPage">
+
+			<h1>Stock</h1>
+      <table id="stock">
+        <tr><th>SKU</th><th>Size</th><th>Colour</th><th>Quality</th><th>Quantity</th><th>Apply</th></tr>
+      </table>
+		</div>
+		<div id="orderPage" class="hidden">
+      <h1>Orders</h1>
+      <table id="orders">
+        <tr><th>Order ID</th><th>Date</th><th>Full Name</th><th>Address</th><th>SKU</th><th>Quantity</th></tr>
+      </table>
+		</div>
+	</div>
+</body>
+
+</html>
